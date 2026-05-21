@@ -18,11 +18,11 @@ const counters = [
 ];
 
 const achievements = [
-  { icon: "🛡️", text: "Improved fraud detection accuracy by 18% using XGBoost and Scikit-learn on claims data." },
-  { icon: "🤖", text: "Reduced manual review effort by 40% using BERT and RAG-based document intelligence." },
-  { icon: "🏥", text: "Improved prediction accuracy by 15% for patient readmission using TensorFlow and PyTorch." },
-  { icon: "⚙️", text: "Reduced data processing time by 35% using Apache Airflow and PySpark ETL pipelines." },
-  { icon: "⚡", text: "Improved investigation turnaround time by 25% via real-time ML pipelines using Spark and Kafka." },
+  { icon: "💳", text: "Deployed transaction authorization models using Python, XGBoost, and TensorFlow at AMEX, increasing payment approval accuracy." },
+  { icon: "📦", text: "Engineered shipment anomaly detection models at USPS, increasing package tracking accuracy across delivery operations." },
+  { icon: "🏦", text: "Developed transaction risk and customer scoring models at Citi Bank, increasing prediction accuracy across enterprise workflows." },
+  { icon: "⚡", text: "Reduced anomaly detection latency by 30% using PySpark and Kafka at Deutsche Borse Group." },
+  { icon: "💊", text: "Optimized regional supply chain demand forecasting at Hetero Healthcare, reducing stockouts by 22%." },
 ];
 
 const Counter = ({ value, label, index }: { value: string; label: string; index: number }) => {

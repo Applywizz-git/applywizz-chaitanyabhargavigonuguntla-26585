@@ -16,6 +16,7 @@ const skillCategories = [
       "Supervised & Unsupervised Learning",
       "Deep Learning",
       "Feature Engineering",
+      "Model Development & Training",
       "Model Evaluation (Precision, Recall, F1, ROC-AUC)",
       "Hyperparameter Optimization",
       "Ensemble Methods",

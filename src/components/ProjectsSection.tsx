@@ -10,28 +10,40 @@ const projects = [
   {
     icon: HiTrendingUp,
     image: fraudDetection,
-    title: "End-to-End Fraud Detection System with Real-Time Inference ",
+    title: "End-to-End Fraud Detection System with Real-Time Inference",
     problem: "Financial transactions required real-time monitoring to identify suspicious activities and reduce false positives in high-volume environments.",
-    solution: "Built a scalable pipeline using PySpark, Kafka, and XGBoost, processing high-volume streams and improving detection accuracy by 17%.",
-    tools: "PySpark · Kafka · XGBoost · Docker · Kubernetes",
+    highlights: [
+      "Built a scalable fraud detection pipeline using PySpark, Kafka, and XGBoost, processing high-volume transaction streams and improving detection accuracy by 17% while reducing false positives.",
+      "Designed feature engineering and model optimization workflows using Pandas, Scikit-learn, and MLflow, improving F1-score and ensuring stable model performance across validation datasets.",
+      "Deployed real-time inference services using FastAPI, Docker, and Kubernetes, enabling low-latency predictions and ensuring high availability across distributed environments."
+    ],
+    tools: "PySpark · Kafka · XGBoost · Pandas · Scikit-learn · MLflow · FastAPI · Docker · Kubernetes",
     impact: ["+17% Detection Accuracy", "Real-Time Inference", "MLOps Pipeline"],
   },
   {
     icon: HiUsers,
     image: healthcareRisk,
-    title: "Healthcare Risk Prediction & Explainable AI  System",
+    title: "Healthcare Risk Prediction & Explainable AI System",
     problem: "Predicting patient readmission accurately is critical for improving care quality and reducing healthcare costs in clinical settings.",
-    solution: "Developed predictive models using TensorFlow and PyTorch, incorporating SHAP and LIME for explainability and transparency.",
-    tools: "TensorFlow · PyTorch · Scikit-learn · SHAP · LIME",
+    highlights: [
+      "Developed patient readmission prediction models using TensorFlow, PyTorch, and Scikit-learn, improving prediction accuracy by 14% across clinical datasets.",
+      "Applied explainability techniques using SHAP and LIME to interpret model outputs, improving transparency and supporting adoption by healthcare stakeholders.",
+      "Integrated models into production using MLflow, CI/CD pipelines, and Docker, ensuring reproducible deployments and consistent model performance."
+    ],
+    tools: "TensorFlow · PyTorch · Scikit-learn · SHAP · LIME · MLflow · Docker · CI/CD",
     impact: ["+14% Prediction Accuracy", "Explainable AI", "Clinical Integration"],
   },
   {
     icon: HiCurrencyDollar,
     image: docProcessing,
-    title: "RAG-Based Intelligent  Document Processing System",
+    title: "RAG-Based Intelligent Document Processing System",
     problem: "Large volumes of unstructured documents made manual summarization and context-aware retrieval slow and error-prone.",
-    solution: "Designed a retrieval-augmented generation pipeline using LangChain, OpenAI API, and FAISS for intelligent document processing.",
-    tools: "LangChain · OpenAI API · FAISS · Prompt Engineering",
+    highlights: [
+      "Designed a document retrieval and generation pipeline using LangChain, OpenAI API, and FAISS, enabling context-aware responses and improving retrieval accuracy.",
+      "Implemented semantic search using embedding models and vector databases, enhancing document relevance and reducing search latency across large datasets.",
+      "Improved response quality using prompt engineering and fine-tuning techniques (LoRA, PEFT), increasing output consistency and contextual accuracy."
+    ],
+    tools: "LangChain · OpenAI API · FAISS · Vector Databases · LoRA · PEFT · Prompt Engineering",
     impact: ["Semantic Search", "LoRA/PEFT Fine-Tuning", "Context-Aware AI"],
   },
 ];
@@ -111,8 +123,15 @@ const ProjectsSection = () => {
                       <p className="text-xs font-body text-muted-foreground leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300">{p.problem}</p>
                     </div>
                     <div>
-                      <p className="text-[10px] font-heading font-bold text-accent uppercase tracking-wider mb-1">Solution:</p>
-                      <p className="text-xs font-body text-muted-foreground leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300">{p.solution}</p>
+                      <p className="text-[10px] font-heading font-bold text-accent uppercase tracking-wider mb-1">Key Highlights:</p>
+                      <ul className="space-y-1.5 mt-1 list-none">
+                        {p.highlights.map((highlight, idx) => (
+                          <li key={idx} className="text-[11px] font-body text-muted-foreground leading-relaxed flex gap-2 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
 
